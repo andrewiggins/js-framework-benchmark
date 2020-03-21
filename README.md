@@ -6,7 +6,16 @@ This branch contains an additional preact framework reference for testing change
     * `./developit/preact`
     * `./andrewiggins/js-framework-benchmark`
 * Checkout whatever branch you want in `developit/preact` ([including PRs](https://help.github.com/articles/checking-out-pull-requests-locally/)) and build it
-* Follow the instructions below for running js-framework-benchmarks
+* Follow the instructions further down in the readme for running js-framework-benchmarks. Summary is below
+    * Run `npm install` and `npm start` in the root of this repo.
+    * In a new console window, for the following folders in js-framework-benchmarks, in order: `preact-v8.2.7-keyed`, `preact-componentDidCatch-keyed`, `webdriver-ts-results`, `webdriver-ts`:
+        * Run `npm install`
+        * Run `npm run build-prod`
+    * In `webdriver-ts`:
+        * Run once: `npm run index`
+        * Run the tests: `npm run selenium -- --count 3 --framework preact`
+        * Build the results: `npm run results`
+        * View the results by pointing your browser to http://localhost:8080/webdriver-ts-results/table.html
 
 [![CircleCI](https://circleci.com/gh/krausest/js-framework-benchmark.svg?style=svg)](https://circleci.com/gh/krausest/js-framework-benchmark)
 
